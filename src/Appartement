@@ -1,0 +1,62 @@
+public class Appartement extends Endroit{
+    private int identifiant;
+    private String titre;
+    private String description;
+    private double loye_mensuel;
+
+    private enum statut {libre, occupe, cours_de_liberation};
+
+    public Appartement(int identifiant, String titre, String description, double loye_mensuel) {
+        super();
+        this.identifiant = identifiant;
+        this.titre = titre;
+        this.description = description;
+        this.loye_mensuel = loye_mensuel;
+
+    }
+
+    @Override
+    public int getIdentifiant() {
+        return identifiant;
+    }
+
+    @Override
+    public void setIdentifiant(int identifiant) {
+        this.identifiant = identifiant;
+    }
+
+    @Override
+    int immeuble(int etage) {
+        return etage;
+    }
+
+    @Override
+    int quartier(int immebl) {
+        return immebl;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getLoye_mensuel() {
+        return loye_mensuel;
+    }
+
+    public void setLoye_mensuel(double loye_mensuel) {
+        this.loye_mensuel = loye_mensuel;
+    }
+
+}
